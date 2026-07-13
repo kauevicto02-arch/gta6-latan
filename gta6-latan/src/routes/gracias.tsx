@@ -44,7 +44,7 @@ function ObrigadoPage() {
             <div>
               <img
                 src="megakit.jpeg"
-                alt="Kit Completo de Monetización GTA VI"
+                alt="Mega Kit IA, Plantillas y Recursos Premium"
                 className="w-full max-w-[310px] md:max-w-[390px] mx-auto rounded-2xl shadow-2xl"
               />
             </div>
@@ -131,7 +131,6 @@ function ObrigadoPage() {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-200">
     <p>✅ Acceso inmediato</p>
     <p>✅ Descarga ilimitada</p>
-    <p>✅ Recursos en español</p>
     <p>✅ Material actualizado</p>
     <p>✅ Acceso vitalicio</p>
     <p>✅ Compatible con ChatGPT y otras herramientas de IA</p>
@@ -150,7 +149,7 @@ function ObrigadoPage() {
                 </p>
               </div>
 
-              <div className="mt-5 w-full max-w-lg">
+              <div className="w-full max-w-md mx-auto overflow-hidden rounded-2xl">
   <div id="hotmart-sales-funnel"></div>
 </div>
             </div>
