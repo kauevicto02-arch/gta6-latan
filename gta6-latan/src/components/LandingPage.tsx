@@ -1263,7 +1263,7 @@ a quienes ya dieron el primer paso.
       <div className="price-compare">
         <div>
           <small>Antes</small>
-          <span className="old-price">$19.900 ARS</span>
+          <span className="old-price">$35.900 ARS</span>
         </div>
 
         <div>

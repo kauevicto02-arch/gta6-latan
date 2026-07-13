@@ -6,33 +6,6 @@ export const Route = createFileRoute("/gracias")({
 });
 
 function ObrigadoPage() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://cdn.lastlink.com/upsell.min.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    const setupDenyButtons = () => {
-      document.querySelectorAll('[id^="denyButton"]').forEach((button) => {
-        button.addEventListener("click", () => {
-          const currentUrl = new URL(window.location.href);
-          const newUrl = new URL("https://lastlink.com/app/member/dashboardV2");
-
-          currentUrl.searchParams.forEach((value, key) => {
-            newUrl.searchParams.append(key, value);
-          });
-
-          window.location.href = newUrl.toString();
-        });
-      });
-    };
-
-    setupDenyButtons();
-
-    return () => {
-      script.remove();
-    };
-  }, []);
 
   return (
     <main className="min-h-screen bg-[#050510] text-white px-4 py-5 md:py-10">
