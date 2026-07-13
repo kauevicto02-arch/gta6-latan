@@ -1,12 +1,34 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/gracias")({
   component: ObrigadoPage,
 });
 
 function ObrigadoPage() {
+useEffect(() => {
+  const script = document.createElement("script");
 
+  script.src =
+    "https://checkout.hotmart.com/lib/hotmart-checkout-elements.js";
+  script.async = true;
+
+  script.onload = () => {
+    const hotmart = (window as any).checkoutElements;
+
+    if (hotmart) {
+      hotmart
+        .init("salesFunnel")
+        .mount("#hotmart-sales-funnel");
+    }
+  };
+
+  document.body.appendChild(script);
+
+  return () => {
+    script.remove();
+  };
+}, []);
   return (
     <main className="min-h-screen bg-[#050510] text-white px-4 py-5 md:py-10">
       <section className="max-w-5xl mx-auto">
@@ -81,20 +103,8 @@ function ObrigadoPage() {
               </div>
 
               <div className="mt-5 flex flex-col items-center gap-3">
-                <div
-                  id="llupsell-CB9D2E0EA-"
-                  className="button-default button-accept w-full bg-green-500 hover:bg-green-400 text-black text-center font-black text-base md:text-xl px-5 py-4 rounded-2xl cursor-pointer transition"
-                >
-                  ✅ SÍ, QUIERO AGREGAR EL KIT
-                </div>
-
-                <div
-                  id="denyButton2088f19"
-                  className="button-default button-deny text-gray-400 hover:text-white underline cursor-pointer text-sm"
-                >
-                  No, gracias. Quiero acceder solo al curso.
-                </div>
-              </div>
+    <div id="hotmart-sales-funnel"></div>
+</div>
             </div>
           </div>
         </div>
