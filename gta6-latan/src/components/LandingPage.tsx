@@ -880,8 +880,8 @@ width:300px;
 
       <div className="hero-cta">
         <div className="price-row">
-          <span className="price-old">$ 19.900 ARS</span>
-          <span className="price-now">$ 6.900 ARS</span>
+          <span className="price-old">$ 35.900 ARS</span>
+          <span className="price-now">$ 8.900 ARS</span>
         </div>
 
         <small>🔒 Compra 100% segura • Garantía de 7 días</small>
@@ -1268,7 +1268,7 @@ a quienes ya dieron el primer paso.
 
         <div>
           <small>Hoy</small>
-          <strong>$6.900 ARS</strong>
+          <strong>$8.900 ARS</strong>
         </div>
       </div>
 
@@ -1276,7 +1276,7 @@ a quienes ya dieron el primer paso.
     </div>
 
     <a
-      href="https://pay.hotmart.com/R106649539E?checkoutMode=10"
+      href="https://pay.hotmart.com/R106649539E?checkoutMode=10&sck=facebook_ads"
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => {
@@ -1334,7 +1334,7 @@ Entra hoy y prepárate antes de que GTA VI conquiste Internet.</p>
   <div><b>{timeLeft.seconds}</b><span>Seg</span></div>
 </div>
          <a
-  href="https://pay.hotmart.com/R106649539E?checkoutMode=10"
+  href="https://pay.hotmart.com/R106649539E?checkoutMode=10&sck=facebook_ads"
   target="_blank"
   rel="noopener noreferrer"
   onClick={() => {
