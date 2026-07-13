@@ -1,5 +1,8 @@
+import {
+  captureTrackingParams,
+  buildTrackedCheckoutUrl,
+} from "@/lib/checkoutTracking";
 import { useEffect, useState } from "react";
-import MetaPixel from "./MetaPixel";
 export default function LandingPage() {
 const [timeLeft, setTimeLeft] = useState({
   days: 14,
@@ -11,6 +14,7 @@ const [timeLeft, setTimeLeft] = useState({
 useEffect(() => {
   const target = new Date();
   target.setDate(target.getDate() + 14);
+  
 
   const timer = setInterval(() => {
     const distance = target.getTime() - new Date().getTime();
@@ -24,10 +28,12 @@ useEffect(() => {
   }, 1000);
 
   return () => clearInterval(timer);
+}, []);useEffect(() => {
+  captureTrackingParams();
 }, []);
   return (
   <>
-    <MetaPixel />
+  
     <div className="landing-page">
       <style>{`
       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&family=Montserrat:wght@700;800;900&display=swap');
@@ -1276,18 +1282,24 @@ a quienes ya dieron el primer paso.
     </div>
 
     <a
-      href="https://pay.hotmart.com/R106649539E?checkoutMode=10&sck=facebook_ads"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={() => {
-        if ((window as any).fbq) {
-          (window as any).fbq("track", "InitiateCheckout");
-        }
-      }}
-      className="btn btn-gold offer-btn"
-    >
-      🚀 QUIERO ACCEDER AHORA
-    </a>
+  href="https://pay.hotmart.com/R106649539E?checkoutMode=10&sck=facebook_ads"
+  onClick={(e) => {
+    e.preventDefault();
+
+    if ((window as any).fbq) {
+      (window as any).fbq("track", "InitiateCheckout");
+    }
+
+    const checkoutUrl = buildTrackedCheckoutUrl(
+      "https://pay.hotmart.com/R106649539E?checkoutMode=10&sck=facebook_ads",
+    );
+
+    window.location.href = checkoutUrl;
+  }}
+  className="btn btn-gold offer-btn"
+>
+  🚀 QUIERO ACCEDER AHORA
+</a>
 
     <small className="secure-text">🔒 Pago seguro • Acceso inmediato • Garantía de 7 días</small>
   </div>
@@ -1333,18 +1345,24 @@ Entra hoy y prepárate antes de que GTA VI conquiste Internet.</p>
   <div><b>{timeLeft.minutes}</b><span>Min</span></div>
   <div><b>{timeLeft.seconds}</b><span>Seg</span></div>
 </div>
-         <a
+        <a
   href="https://pay.hotmart.com/R106649539E?checkoutMode=10&sck=facebook_ads"
-  target="_blank"
-  rel="noopener noreferrer"
-  onClick={() => {
+  onClick={(event) => {
+    event.preventDefault();
+
     if ((window as any).fbq) {
       (window as any).fbq("track", "InitiateCheckout");
     }
+
+    const checkoutUrl = buildTrackedCheckoutUrl(
+      "https://pay.hotmart.com/R106649539E?checkoutMode=10&sck=facebook_ads",
+    );
+
+    window.location.href = checkoutUrl;
   }}
-  className="btn btn-gold"
+  className="btn btn-gold offer-btn"
 >
- 🚀 QUIERO ASEGURAR MI ACCESO
+  🚀 QUIERO ASEGURAR MI ACCESO
 </a>
         </div>
       </section>
