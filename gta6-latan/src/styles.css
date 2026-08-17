@@ -142,3 +142,6 @@
     color: var(--color-foreground);
   }
 }
+#compra {
+  scroll-margin-top: 15px;
+}

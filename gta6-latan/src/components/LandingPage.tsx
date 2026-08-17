@@ -859,7 +859,7 @@ width:300px;
 
       <h1>
   GANA DINERO<br />
-  CON<span className="vi">GTA VI</span>
+  CON<span className="vi"> GTA VI</span>
 </h1>
 <p
   style={{
@@ -870,7 +870,7 @@ width:300px;
     letterSpacing: "1px",
   }}
 >
-  MÉTODO GTA VI
+ GTA HUB • PLATAFORMA DE CREACIÓN
 </p>
 
       <p className="sub">
@@ -886,28 +886,46 @@ width:300px;
 
       <div className="hero-cta">
         <div className="price-row">
-          <span className="price-old">$ 35.900 ARS</span>
-          <span className="price-now">$ 8.900 ARS</span>
+          <span className="price-old">$ 39.900 ARS</span>
+          <span className="price-now">$ 14.900 ARS</span>
         </div>
 
         <small>🔒 Compra 100% segura • Garantía de 7 días</small>
 
-        <a
-          href="#compra"
-          className="btn btn-primary"
-        >
-          🚀 QUIERO EMPEZAR AHORA
-        </a>
+       <a
+  href="https://pay.hotmart.com/R106649539E?checkoutMode=10"
+  onClick={(e) => {
+    e.preventDefault();
+
+    if ((window as any).fbq) {
+      (window as any).fbq("track", "InitiateCheckout", {
+        content_name: "GTA Hub",
+        content_type: "product",
+        value: 14900,
+        currency: "ARS",
+      });
+    }
+
+    const checkoutUrl = buildTrackedCheckoutUrl(
+      "https://pay.hotmart.com/R106649539E?checkoutMode=10"
+    );
+
+    window.location.href = checkoutUrl;
+  }}
+  className="btn btn-primary"
+>
+  🚀 QUIERO ACCEDER A GTA HUB
+</a>
       </div>
     </div>
 <section className="block">
 
   <h2>
-    Conoce por dentro el<span className="accent">curso</span>
+    CONOCÉ POR DENTRO<span className="accent"> GTA HUB</span>
   </h2>
 
   <p className="lead">
-     Millones de personas ya esperan GTA VI. Aprovecha esta oportunidad para crear una audiencia antes que la mayoría.
+     La plataforma donde tenés todo lo necesario para aprender, crear y poner en práctica la estrategia.
     <br /><br />
   </p>
 
@@ -969,11 +987,29 @@ Aunque empieces hoy utilizando solo tu celular.
 
         <div style={{marginTop:"22px"}}>
           <a
-            href="#compra"
-            className="btn btn-primary"
-          >
-            QUIERO EMPEZAR AHORA 🚀
-          </a>
+  href="https://pay.hotmart.com/R106649539E?checkoutMode=10"
+  onClick={(e) => {
+    e.preventDefault();
+
+    if ((window as any).fbq) {
+      (window as any).fbq("track", "InitiateCheckout", {
+        content_name: "GTA Hub",
+        content_type: "product",
+        value: 14900,
+        currency: "ARS",
+      });
+    }
+
+    const checkoutUrl = buildTrackedCheckoutUrl(
+      "https://pay.hotmart.com/R106649539E?checkoutMode=10"
+    );
+
+    window.location.href = checkoutUrl;
+  }}
+  className="btn btn-primary"
+>
+  🚀 QUIERO ACCEDER A GTA HUB
+</a>
         </div>
       </section>
       <section className="block" style={{ background: "#0a0610" }}>
@@ -1015,11 +1051,29 @@ Aunque empieces hoy utilizando solo tu celular.
 
   <div style={{ marginTop: "22px" }}>
     <a
-      href="#compra"
-      className="btn btn-primary"
-    >
-      🚀 QUIERO APROVECHAR ESTA OPORTUNIDAD
-    </a>
+  href="https://pay.hotmart.com/R106649539E?checkoutMode=10"
+  onClick={(e) => {
+    e.preventDefault();
+
+    if ((window as any).fbq) {
+      (window as any).fbq("track", "InitiateCheckout", {
+        content_name: "GTA Hub",
+        content_type: "product",
+        value: 14900,
+        currency: "ARS",
+      });
+    }
+
+    const checkoutUrl = buildTrackedCheckoutUrl(
+      "https://pay.hotmart.com/R106649539E?checkoutMode=10"
+    );
+
+    window.location.href = checkoutUrl;
+  }}
+  className="btn btn-primary"
+>
+  🚀 QUIERO APROVECHAR ESTA OPORTUNIDAD
+</a>
   </div>
 <section className="block">
 
@@ -1076,12 +1130,30 @@ Quien empieza antes del lanzamiento estará preparado cuando toda la atención l
       Probá todo el curso durante 7 días. Si no es para vos, solo tenés que solicitar el reembolso dentro del plazo de garantía.
     </p>
 
-    <a
-      href="#compra"
-      className="btn btn-gold"
-    >
-      🚀 QUIERO ACCEDER AHORA
-    </a>
+   <a
+  href="https://pay.hotmart.com/R106649539E?checkoutMode=10"
+  onClick={(e) => {
+    e.preventDefault();
+
+    if ((window as any).fbq) {
+      (window as any).fbq("track", "InitiateCheckout", {
+        content_name: "GTA Hub",
+        content_type: "product",
+        value: 14900,
+        currency: "ARS",
+      });
+    }
+
+    const checkoutUrl = buildTrackedCheckoutUrl(
+      "https://pay.hotmart.com/R106649539E?checkoutMode=10"
+    );
+
+    window.location.href = checkoutUrl;
+  }}
+  className="btn btn-gold"
+>
+  🚀 QUIERO ACCEDER AHORA
+</a>
   </div>
 
 </section>
@@ -1244,7 +1316,7 @@ a quienes ya dieron el primer paso.
     </div>
   </div>
 
-  <div id="compra" className="trust-offer-box">
+ <div className="trust-offer-box">
     <span className="section-kicker">COMPRA CON CONFIANZA</span>
 
     <h2>
@@ -1263,7 +1335,7 @@ a quienes ya dieron el primer paso.
       <strong> Sin pagos mensuales. Sin costos ocultos.</strong>
     </p>
 
-    <div className="premium-price-box">
+   <div id="compra" className="premium-price-box">
       <span className="price-label">OFERTA DE LANZAMIENTO</span>
 
       <div className="price-compare">
@@ -1274,7 +1346,7 @@ a quienes ya dieron el primer paso.
 
         <div>
           <small>Hoy</small>
-          <strong>$8.900 ARS</strong>
+          <strong>$14.900 ARS</strong>
         </div>
       </div>
 
